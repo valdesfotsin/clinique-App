@@ -1,38 +1,194 @@
-.App {
-  text-align: center;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f3f3f3;
 }
+/* Dr ngwashi app styles */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.header {
+  padding: 200px 0px 0px 0px;
+  background-image: url(images/bg-callout.jpg);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+.header h1 {
+  font-size: 75px;
+  font-weight: bold;
+ text-shadow: 2px 3px 4px black;
+ 
+}
+.header p {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  
+}
+.header button {
+  width: 13%;
+  margin-top: 35px;
+}
+/* Dashbord styles */
+
+.navigation > .navbar > .brand {
+  background-color: #3198c7;
+  height: 50px;
+  /* border-radius: 12px; trouver la fonctionnaliter de gauche*/
+  width: 25em;
+  padding: 20px 0px 50px 20px;
+  border-radius: 0px 0px 70px 0px;
+}
+.navigation > .navbar {
+  margin-top: 20px;
+  padding: 0;
+  margin-left: 20px;
+  
+}
+.appointement div{
+
+  margin-top: 30px;
+}
+/* .appointement button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+} */
+
+div input{
+  /* width: 320px; */
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 30px;
+  padding: 10px 10px 10px 20px;
+  border: none;
+  outline: none;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.score div > .missed {
+ 
+  background-color: #fec4c4;
+  overflow: auto;
+  padding-top: 10px;
+  padding-left: 30px;
+  
+}
+.score div > .recheduled {
+  background-color: #fff2e0;
+  overflow: auto;
+  padding-top: 10px;
+  padding-left: 30px;
+  
+}
+.score div > .passed {
+  background-color: #a2b9a9;
+  overflow: auto;
+  padding-top: 10px;
+  padding-left: 30px;
+  
+
+
+}
+.score div {
+  /* display: flex; */
+  flex-wrap: wrap;
+  border-radius: 0px 30px 0px 30px;
+  margin: auto;
+  margin-top: 20px;
+  
+}
+.score  p{
+   font-size: 37px;
+}
+.icon {
+  position: absolute;
+  right: 70px;
+  top: 145px;
+  margin-top: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  
+  
+}
+.link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.link:hover{
+  color: #FFFFFF;
+}
+#btnwelcome:hover{
+  transform: scale(1.15);
+
+}
+.firstTitle div {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.firstTitle div div{
+  display: flex;
+  background-color: #FFFFFF;
+  padding: 10px 180px 10px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.firstTitle div div button {
+  background-color: #FFFFFF;
+  border: #FFFFFF;
+  margin-left: 100px;
+  font-size: 18px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#search {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.datas div {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin: auto;
+  /* border: 1px solid #a2b9a9; */
+  margin-bottom: 15px;
+  
+}
+.datas div div {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color:#FFFFFF;
+  margin:auto;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+}
+.datas div .status {
+  background-color: #add1bc;
+  color: green;
+  border-radius: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.number {
+  margin-bottom: 100px;
 }
