@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineSearch , AiOutlineLeft, AiOutlineRight} from 'react-icons/ai'
+import {GrFormAdd} from 'react-icons/gr'
 import {HiChevronUpDown} from 'react-icons/hi2';
 import { toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -94,10 +95,28 @@ function Dashbord  () {
         </div>
 
         <div className='number'>
-            <div className='row'>
-                <div></div>
+            <div>
+                <div className='col-lg-4'>
+                    <button>< AiOutlineLeft className='ms-2 fw-bold' /> </button> 
+                            <p className='mt-3 numberp'>1</p>
+                            <p className='mt-3'>2</p>
+                            <p className='mt-3'>3</p>
+                    <button> <AiOutlineRight className='me-2 fw-bold' /> </button> 
+                </div>
+                <div className='col-lg-4 addForm'>
+                    <button> < GrFormAdd className="formadd"/> </button>
+                </div>
+
             </div>
+           
+
+           
+
+                
+            
         </div>
+
+        
 
     </>
   )

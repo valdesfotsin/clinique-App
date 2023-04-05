@@ -189,6 +189,52 @@ div input{
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.number {
+.number div {
   margin-bottom: 100px;
+  background-color: #FFFFFF;
+  width: 200px; 
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 80px;
+  border-radius: 20px;
+  height: 60px;
+}
+
+.number button {
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 20px;
+}
+.number .numberp {
+  background-color: #fec4c4;
+  width: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.number div .addForm  {
+  /* background-color: #c7316a; */
+  width: 40px;
+  margin-left: 150px;
+  height: 40px;
+  border-radius: 8px;
+  margin-top: 10px;
+  
+}
+
+.number div .addForm button {
+  background-color:#be5b5b;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  box-shadow: 2px 3px 4px rgb(122, 114, 114);
+
+  
+  
+  
+}
+.number div .addForm button .formadd {
+    
 }
