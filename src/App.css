@@ -68,7 +68,7 @@ body {
   border: none;
 } */
 
-div input{
+div #search{
   /* width: 320px; */
   width: 100%;
   height: 100%;
@@ -235,6 +235,34 @@ div input{
   
   
 }
-.number div .addForm button .formadd {
-    
+.number div .addForm button:hover {
+    background-color: #f79494;
+}
+/* new record */
+
+.btnleft {
+  width: 90px;
+  border: none;
+  background-color: #f3f3f3;
+}
+
+ .lefticon {
+  text-decoration: none;
+  color: black;
+}
+#validationCustom01{
+  border: none;
+  
+}
+
+#btnSubmit {
+  background-color: #be5b5b;
+  width: 120px;
+  color: #FFFFFF;
+  font-weight: bold;
+
+}
+
+#btnSubmit:hover {
+    background-color: #f79494;
 }

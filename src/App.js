@@ -5,6 +5,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 import Home from './components/Home';
 import Dashbord from './components/Dashbord';
+import NewRecord from './components/NewRecord';
 
 
 const router = createBrowserRouter([
@@ -15,6 +16,12 @@ const router = createBrowserRouter([
   {
       path: "/profile",
       element: <Dashbord />
+  },
+  {
+    
+      path: "/NewRecord",
+      element: <NewRecord />
+  
   }
 ])
 

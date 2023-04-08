@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { useEffect } from 'react';
 import Records from './Records';
 import PatientInfos from './PatientInfos';
+import { Link } from 'react-router-dom';
 
 function Dashbord  () {
 
@@ -38,7 +39,7 @@ function Dashbord  () {
 
                 <div className='col-lg-4 col-sm-4 col-xs-12 offset-lg-4' >
                 
-                     <input type="search"  placeholder='search' />  <AiOutlineSearch className='icon' /> 
+                     <input type="search"  placeholder='search' id='search' />  <AiOutlineSearch className='icon' /> 
                       
 
                 </div>
@@ -104,7 +105,7 @@ function Dashbord  () {
                     <button> <AiOutlineRight className='me-2 fw-bold' /> </button> 
                 </div>
                 <div className='col-lg-4 addForm'>
-                    <button> < GrFormAdd className="formadd"/> </button>
+                    <button> <Link to={`/NewRecord`}>< GrFormAdd className="formadd"/></Link>   </button>
                 </div>
 
             </div>
