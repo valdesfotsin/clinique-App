@@ -1,24 +1,36 @@
-import React, { useState } from 'react'
-import { AiOutlineSearch , AiOutlineLeft, AiOutlineRight} from 'react-icons/ai'
-import {GrFormAdd} from 'react-icons/gr'
-import {HiChevronUpDown} from 'react-icons/hi2';
+import React, { useState, useEffect } from 'react';
+import { AiOutlineSearch, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+import { GrFormAdd } from 'react-icons/gr';
+import { HiChevronUpDown } from 'react-icons/hi2';
 import { toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-import { useEffect } from 'react';
-import Records from './Records';
+import 'react-toastify/dist/ReactToastify.css';
+import { getPosts, deleteRecord } from '../services';
 import PatientInfos from './PatientInfos';
 import { Link } from 'react-router-dom';
 
-function Dashbord  () {
+function Dashbord() {
+  const [posts, setPosts] = useState([]);
+  const [isToastDisplayed, setIsToastDisplayed] = useState(false);
 
-    const [record, setRecord] = useState(Records);
-    
-    useEffect(()=> {
-        return () => {
-            toast.success(`welcome`, {theme: 'colored'});       
-    }
-}) 
+  useEffect(() => {
+    getPosts().then((data) => {
+      setPosts(data);
+      if (!isToastDisplayed) {
+        toast.success('Bienvenue sur le dashboard', { theme: 'colored' });
+        setIsToastDisplayed(true);
+      }
+    });
+  }, [isToastDisplayed]);
 
+  const handleDeletePost = (id) => {
+    deleteRecord(id)
+      .then(() => {
+        setPosts((prevPosts) => prevPosts.filter((post) => post._id !== id));
+      })
+      .catch((error) => {
+        console.error('Erreur lors de la suppression du post :', error);
+      });
+  };
     
   return (
     <>       
@@ -79,15 +91,18 @@ function Dashbord  () {
 
         <div>
             {
-                record.map(rec => {
+                posts.map(post => {
                     return(
                         <PatientInfos 
-                        name={rec.name} 
-                        code={rec.code}
-                        age={rec.age}
-                        address={rec.address}
-                        phone={rec.phone}
-                        status={rec.status}
+                        key={post._id}
+                        _id={post._id}
+                        name={post.name} 
+                        code={post.code}
+                        age={post.age}
+                        address={post.adress}
+                        phone={post.phone}
+                        status={post.appointementStatus}
+                        deletePost={handleDeletePost}
                         />
                         )
                 }
